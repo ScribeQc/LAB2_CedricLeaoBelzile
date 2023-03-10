@@ -7,7 +7,12 @@ public class Joueur : MonoBehaviour
 {
     //Attributs
     [SerializeField] private float _vitesse = 450;
+    [SerializeField] private float _poid = 300;
     private bool jouer;
+    private bool isGround;
+    private bool isStair;
+    private float push = -2.0f;
+    [SerializeField] private float rotationSpeed;
     private Rigidbody _rb;
 
     // Méthodes privées
@@ -25,24 +30,57 @@ public class Joueur : MonoBehaviour
     {
         if (jouer)
         {
-            MovementsJoueur();
+            if (isGround) 
+            { MovementsJoueur();}
         }
 
     }
 
+    private void OnCollisionStay(Collision collision)
+    {
+        if (collision.gameObject.tag == "ground")
+        {
+            isGround= true;
+        }
+        if (collision.gameObject.tag == "stair")
+        {
+            isGround = true;
+            isStair = true;
+        }
+    }
 
-    private void
-  
+    private void OnCollisionExit(Collision collision)
+    {     
+            isGround = false; 
+            isStair= false;
+    }
+
     private void MovementsJoueur()
     {
 
         float positionX = Input.GetAxis("Horizontal");
         float positionZ = Input.GetAxis("Vertical");
         Vector3 direction = new Vector3(positionX, 0f, positionZ);
-        //_rb.AddForce(poid * push, ForceMode.Acceleration);
+        direction.Normalize();
+        Vector3 pushed;
+        if(isStair)
+        {
+            pushed = new Vector3(0f, push, 0f);
+            _rb.AddForce(_poid * pushed, ForceMode.Force);
+        }
         _rb.velocity = direction * Time.fixedDeltaTime * _vitesse;
 
         //_rb.AddForce(direction * Time.fixedDeltaTime * _vitesse); Fait comme un effet de glisse , car on utilise des forces pour se mouvoir donc pour arreter faut envoyer plus de force de l'autre coté
+   
+       /* if(direction != Vector3.zero) 
+        { 
+            Quaternion toRotation = Quaternion.LookRotation(direction, Vector3.up);
+
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.fixedDeltaTime) ;
+        }
+       */
+
+    
     }
     
     public void Arret()
