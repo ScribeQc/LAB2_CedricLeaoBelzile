@@ -48,7 +48,7 @@ public class GestionFinal : MonoBehaviour
                 Debug.Log("Obstacles accroché au niveau 3 : " + _accrochagesNiveau3);
                 Debug.Log("Temps total pour niveau 3 : " + _tempsTotalNiv3.ToString("f2"));
 
-                Debug.Log("Temps total pour les deux niveaux est de : " + (tempsTotalniv1 + _tempsTotalNiv2 + _tempsTotalNiv3).ToString("f2"));
+                Debug.Log("Temps total pour les trois niveaux est de : " + (tempsTotalniv1 + _tempsTotalNiv2 + _tempsTotalNiv3).ToString("f2"));
 
                 _gestionJoueur.Arret();
             }
