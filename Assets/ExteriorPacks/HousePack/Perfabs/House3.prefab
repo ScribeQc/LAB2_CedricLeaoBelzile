@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 400000}
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
+  - component: {fileID: 5181970491969406995}
+  - component: {fileID: 381683852988302833}
+  - component: {fileID: 1012442510420599315}
+  - component: {fileID: 4225255343322285434}
   m_Layer: 0
   m_Name: House3
   m_TagString: Untagged
@@ -92,3 +96,54 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5181970491969406995
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 31.76391, y: 15.90046, z: 15.279284}
+  m_Center: {x: 0.10704517, y: -2.8871423e-15, z: -2.2733507}
+--- !u!65 &381683852988302833
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 22.927559, y: 15.90046, z: 16.468529}
+  m_Center: {x: -0.27367735, y: 2.9236731e-15, z: -1.6787281}
+--- !u!65 &1012442510420599315
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14.74847, y: 15.90046, z: 18.811462}
+  m_Center: {x: -0.23453522, y: 7.510133e-16, z: -0.5072613}
+--- !u!114 &4225255343322285434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a53d384f380d5a4ab5ff8a4c0052d24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

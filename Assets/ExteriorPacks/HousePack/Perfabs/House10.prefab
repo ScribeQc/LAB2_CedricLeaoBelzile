@@ -11,6 +11,10 @@ GameObject:
   - component: {fileID: 400000}
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
+  - component: {fileID: 5223142452374896627}
+  - component: {fileID: 532317585554509590}
+  - component: {fileID: 3288574161106764456}
+  - component: {fileID: -7224110078088312946}
   m_Layer: 0
   m_Name: House10
   m_TagString: Untagged
@@ -95,3 +99,54 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5223142452374896627
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 16.604927, y: 21.000992, z: 18.331284}
+  m_Center: {x: -1.56567, y: 6.838334e-16, z: -0.7339058}
+--- !u!65 &532317585554509590
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 19.341139, y: 21.000992, z: 6.1651955}
+  m_Center: {x: -0.19756413, y: 4.8341864e-16, z: -1.3046379}
+--- !u!65 &3288574161106764456
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.6197777, y: 21.000992, z: 19.799099}
+  m_Center: {x: -1.135294, y: 0, z: 0.0000019073486}
+--- !u!114 &-7224110078088312946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a53d384f380d5a4ab5ff8a4c0052d24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
