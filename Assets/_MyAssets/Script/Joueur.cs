@@ -69,16 +69,14 @@ public class Joueur : MonoBehaviour
             _rb.AddForce(_poid * pushed, ForceMode.Force);
         }
         _rb.velocity = direction * Time.fixedDeltaTime * _vitesse;
+        direction.Normalize();
 
         //_rb.AddForce(direction * Time.fixedDeltaTime * _vitesse); Fait comme un effet de glisse , car on utilise des forces pour se mouvoir donc pour arreter faut envoyer plus de force de l'autre coté
    
-       /* if(direction != Vector3.zero) 
-        { 
-            Quaternion toRotation = Quaternion.LookRotation(direction, Vector3.up);
-
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.fixedDeltaTime) ;
+      if(direction != Vector3.zero) 
+        {
+            transform.forward = direction;
         }
-       */
 
     
     }

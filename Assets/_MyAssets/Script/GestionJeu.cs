@@ -8,7 +8,9 @@ public class GestionJeu : MonoBehaviour
     // Attributs
     private int _pointage;
     private int _accrochageNiveau1 = 0;
+    private int _accrochageNiveau2 = 0;
     private float _tempsNiveau1 = 0.0f;
+    private float _tempsNiveau2 = 0.0f;
 
     private void Awake()
     {
@@ -54,14 +56,30 @@ public class GestionJeu : MonoBehaviour
         return _tempsNiveau1;
     }
 
+    public float GetTempsNiv2()
+    {
+        return _tempsNiveau2;
+    }
+
     public int GetAccrochageNiv1()
     {
         return _accrochageNiveau1;
+    }
+
+    public int GetAccrochageNiv2()
+    {
+        return _accrochageNiveau2;
     }
 
     public void SetNiveau1(int accrochages, float tempsNiv1)
     {
         _accrochageNiveau1 = accrochages;
         _tempsNiveau1 = tempsNiv1;
+    }
+
+    public void SetNiveau2(int accrochages, float tempsNiv2)
+    {
+        _accrochageNiveau2 = _accrochageNiveau1 + accrochages;
+        _tempsNiveau2 = tempsNiv2 - _tempsNiveau1;
     }
 }
