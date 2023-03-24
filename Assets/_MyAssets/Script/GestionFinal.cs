@@ -23,16 +23,21 @@ public class GestionFinal : MonoBehaviour
             if (indexScene == 2)
             {
                 int erreurs = _gestionJeu.GetPointage();
-                float tempsTotalniv1 = _gestionJeu.GetTempsNiv1() + _gestionJeu.GetAccrochageNiv1();
-                float _tempsNiveau2 = Time.time - _gestionJeu.GetTempsNiv1();
-                float _tempsNiveau3 = Time.time - (_gestionJeu.GetTempsNiv1() + _gestionJeu.GetTempsNiv2());
-                int _accrochagesNiveau2 = _gestionJeu.GetPointage() - _gestionJeu.GetAccrochageNiv1();
-                int _accrochagesNiveau3 = _gestionJeu.GetPointage() - (_gestionJeu.GetAccrochageNiv2()+_gestionJeu.GetAccrochageNiv1());
+                int _accrochagesNiveau1 = _gestionJeu.GetAccrochageNiv1();
+
+               float _tempsNiveau1 = _gestionJeu.GetTempsNiv1();             
+               float _tempsNiveau2 = _gestionJeu.GetTempsNiv2();
+               float _tempsNiveau3 = Time.time - _tempsNiveau2-_tempsNiveau1;
+
+                int _accrochagesNiveau2 = _gestionJeu.GetAccrochageNiv2();
+                int _accrochagesNiveau3 = erreurs - (_accrochagesNiveau2+_accrochagesNiveau1);
+
                 float _tempsTotalNiv2 = _tempsNiveau2 + _accrochagesNiveau2;
                 float _tempsTotalNiv3 = _tempsNiveau3 + _accrochagesNiveau3;
+                float tempsTotalniv1 = _tempsNiveau1 + _accrochagesNiveau1;
 
-                Debug.Log("Le temps pour le niveau 1 est de : " + _gestionJeu.GetTempsNiv1().ToString("f2") + " secondes");
-                Debug.Log("Obstacles accroché au niveau 1 : " + _gestionJeu.GetAccrochageNiv1());
+                Debug.Log("Le temps pour le niveau 1 est de : " + _tempsNiveau1.ToString("f2") + " secondes");
+                Debug.Log("Obstacles accroché au niveau 1 : " + _accrochagesNiveau1);
                 Debug.Log("Temps total pour niveau 1 : " + tempsTotalniv1.ToString("f2"));
 
                 Debug.Log("Le temps pour le niveau 2 est de : " + _tempsNiveau2.ToString("f2") + "secondes");
@@ -53,9 +58,10 @@ public class GestionFinal : MonoBehaviour
                 _gestionJeu.SetNiveau1(_gestionJeu.GetPointage(), Time.time);
                 SceneManager.LoadScene(indexScene + 1);
             }
-            else
+            else if (indexScene==1)
             {
                 //Charger la scene suivante
+                _gestionJeu.SetNiveau2(_gestionJeu.GetPointage(), Time.time);
                 SceneManager.LoadScene(indexScene + 1);
             }
 

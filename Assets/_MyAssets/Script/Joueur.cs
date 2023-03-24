@@ -28,6 +28,7 @@ public class Joueur : MonoBehaviour
 
     private void FixedUpdate()
     {
+    
         if (jouer)
         {
             if (isGround) 

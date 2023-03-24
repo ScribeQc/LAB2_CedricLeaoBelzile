@@ -12,6 +12,7 @@ public class GestionJeu : MonoBehaviour
     private float _tempsNiveau1 = 0.0f;
     private float _tempsNiveau2 = 0.0f;
 
+
     private void Awake()
     {
         int nbGestionJeu = FindObjectsOfType<GestionJeu>().Length;
@@ -79,7 +80,8 @@ public class GestionJeu : MonoBehaviour
 
     public void SetNiveau2(int accrochages, float tempsNiv2)
     {
-        _accrochageNiveau2 = _accrochageNiveau1 + accrochages;
-        _tempsNiveau2 = tempsNiv2 - _tempsNiveau1;
+        _accrochageNiveau2 = accrochages-_accrochageNiveau1;
+        _tempsNiveau2 = tempsNiv2- _tempsNiveau1;
     }
+
 }
