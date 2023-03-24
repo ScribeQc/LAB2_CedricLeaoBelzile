@@ -21,7 +21,7 @@ public class Joueur : MonoBehaviour
        
         jouer = true;
         //Position de départ du joueur
-       // this.transform.position = new Vector3(-28f, 0.51f, -31f);
+        this.transform.position = new Vector3(53f, 1.3f, -51f);
         _rb = GetComponent<Rigidbody>();
         //_rb.useGravity= true;
     }
